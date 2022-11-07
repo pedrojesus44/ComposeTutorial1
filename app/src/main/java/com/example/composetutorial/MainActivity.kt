@@ -1,5 +1,5 @@
 package com.example.composetutorial
-
+//imports
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -16,6 +16,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
+            //Exibindo conteúdo no set content
             MessageCard("Android")
         }
     }
@@ -23,11 +24,12 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MessageCard(name: String) {
+    //Definindo texto para variável name
     Text(text = "Hello $name!")
 }
 
-@Preview
+@Preview //Método que permitirá a visualização das alterações feitas
 @Composable
 fun PreviewMessageCard() {
-    MessageCard("Android")
+    MessageCard("Android") // declarando nome ao message card
 }
